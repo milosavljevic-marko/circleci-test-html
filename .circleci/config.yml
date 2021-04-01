@@ -1,6 +1,8 @@
-version 2.1
+version: 2.1
+
 jobs:
   build:
+
     docker:
       - image: circleci/nginx:1.19.9
     steps:
