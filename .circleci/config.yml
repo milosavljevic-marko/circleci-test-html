@@ -1,0 +1,15 @@
+version 2.1
+jobs:
+  build:
+    docker:
+      - image: circleci/nginx:1.19.9
+    steps:
+      - checkout
+      - run docker build -t static-website .
+      - run docker container run -it -d -p 80:80 static-website:lates
+
+
+workflows:
+  build_and_test:
+    jobs:
+      - build
