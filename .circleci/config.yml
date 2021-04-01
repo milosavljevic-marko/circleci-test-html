@@ -8,7 +8,6 @@ jobs:
       - checkout
       - run: docker build -t static-website .
       - run: docker container run -it -d -p 80:80 static-website:latest
-      - run: firefox index.html
 workflows:
   build:
     jobs:
