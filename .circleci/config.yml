@@ -5,12 +5,12 @@ jobs:
 
     machine: true
     steps:
- #     - checkout
+      - checkout
       - run docker build -t static-website .
       - run docker container run -it -d -p 80:80 static-website:lates
 
 
 workflows:
-  build_and_test:
+  build:
     jobs:
       - build
