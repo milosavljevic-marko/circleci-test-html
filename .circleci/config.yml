@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build:
 
-    machine: true.9
+    machine: true
     steps:
  #     - checkout
       - run docker build -t static-website .
