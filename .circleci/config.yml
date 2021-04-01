@@ -6,8 +6,8 @@ jobs:
     machine: true
     steps:
       - checkout
-      - run docker build -t static-website .
-      - run docker container run -it -d -p 80:80 static-website:lates
+      - run: docker build -t static-website .
+      - run: docker container run -it -d -p 80:80 static-website:lates
 
 
 workflows:
